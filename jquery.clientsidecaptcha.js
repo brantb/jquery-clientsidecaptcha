@@ -37,9 +37,9 @@
 		// Create CAPTCHA ui
 		var table = $('<table></table>').css({ 
 			'font-family' : 'cursive',
-		    'color' : '#fff', 
-		    'background-color' : '#A0A0A0',
-		    'text-decoration' : 'none'
+			'color' : '#fff', 
+			'background-color' : '#A0A0A0',
+			'text-decoration' : 'none'
 		});
 		var row = $('<tr></tr>').appendTo(table);
 		for (var i=0; i < captchaText.length; i++) {
