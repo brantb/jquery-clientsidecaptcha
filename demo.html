@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Client Side Captcha Demo</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.clientsidecaptcha.js"></script>
+	</head>
+	<body>
+		<form>
+			<p><label>Name: <input type="text" name="name" /></label></p>
+			<p><label>Email: <input type="text" name="email" /></label></p>
+			<p><label for="comment">Comment:</label><br />
+				<textarea name="comment" id="comment"></textarea>
+			</p>
+			<p><label>Enter the text shown below: <input type="text" id="captchaText" /></label></p>
+			<p id="captcha"></p>
+			<p><input type="submit" /></p>
+		</form>
+		<script type="text/javascript">
+			$("form").clientSideCaptcha({
+				input: "#captchaText", 
+				display: "#captcha",
+				pass : function() { alert("Passed!"); return false; },
+				fail : function() { alert("Failed!"); return false; }
+			});
+		</script>
+	</body>
+</html>
